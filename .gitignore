@@ -1,0 +1,7 @@
+.idea/*
+.settings/*
+target/*
+.project
+.classpath
+libs/*
+Selenium_Easy.iml
