@@ -1,7 +1,11 @@
 package PageObject;
 
 import BaseTest.BrowserBot;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class CheckBoxDemoPage extends BrowserBot {
     public CheckBoxDemoPage(WebDriver driver) throws Exception {
@@ -31,8 +35,9 @@ public class CheckBoxDemoPage extends BrowserBot {
     }
 
     public void selectAlternativeCheckBoxes(int count) throws Exception {
-        for (int i = 1; i < count; i++) {
-            click(CHECK_BOX + i + CLOSE_BRACE, "xpath");
+        List<WebElement> checkBox = driver.findElements(By.xpath("//label/input[@type='checkbox']"));
+        for(int i=0; i<checkBox.size(); i =i+2){
+            checkBox.get(i).click();
         }
           }
 
@@ -41,11 +46,20 @@ public class CheckBoxDemoPage extends BrowserBot {
         verifyTextIsPresent(UNCHECK_ALL, "xpath", "Success message is not display");
     }
 
-    public void VerifyAlternativeCheckBoxesAreSelected() throws Exception {
+    public void verifyAlternativeCheckBoxesareSelected() throws Exception {
+        waitForElementAppearance(UNCHECK_ALL, "xpath");
+    }
 
-          }
+    public void uncheckAll() throws Exception {
+        waitForElementAppearance(UNCHECK_ALL, "xpath");
+        click(UNCHECK_ALL, "xpath");
+    }
 
-    public void alternativeCheckBoxes() throws Exception {
+    public void verifyCheckAllButton() throws Exception {
+        waitForElementAppearance(CHECK_ALL, "xpath");
+        verifyTextIsPresent(CHECK_ALL, "xpath", "Check all button is not displayed");
+    }
 
-     }
+
+
 }
