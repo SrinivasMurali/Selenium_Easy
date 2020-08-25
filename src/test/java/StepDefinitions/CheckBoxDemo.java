@@ -59,6 +59,9 @@ public class CheckBoxDemo extends Configuration {
         checkboxDemo.verifyUncheckAllButtonIsDisplay();
     }
 
-
+    @When("Select first three check box")
+    public void selectFirstThreeChkBoxes() throws Exception {
+        checkboxDemo.selectFirstThreeChkBoxes();
+    }
 
 }
