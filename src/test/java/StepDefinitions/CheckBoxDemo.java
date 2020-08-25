@@ -36,7 +36,7 @@ public class CheckBoxDemo extends Configuration {
 
     @When("Verify alternative check boxes are selected")
     public void VerifyAlternativeCheckBoxesareSelected(int count) throws Exception {
-        checkboxDemo.VerifyAlternativeCheckBoxesareSelected();
+
     }
 
     @When("Select alternative check boxes")

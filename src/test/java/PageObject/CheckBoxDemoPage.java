@@ -1,7 +1,11 @@
 package PageObject;
 
 import BaseTest.BrowserBot;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class CheckBoxDemoPage extends BrowserBot {
     public CheckBoxDemoPage(WebDriver driver) throws Exception {
@@ -10,7 +14,7 @@ public class CheckBoxDemoPage extends BrowserBot {
 
     public static final String SINGLE_CHECK_BOX         = "isAgeSelected",
                                SINGLE_CHK_BOX_SELECTED  = "//div[text()='Success - Check box is checked']",
-                               CHECK_BOX                = "(//input[@type='checkbox'])[",
+                               ALL_CHECK_BOX            = "//label/input[@type='checkbox']",
                                CLOSE_BRACE              = "]",
                                UNCHECK_ALL              = "//input[@value='Uncheck All']",
                                CHECK_ALL                = "//input[@value='Check All']";
@@ -31,18 +35,15 @@ public class CheckBoxDemoPage extends BrowserBot {
     }
 
     public void selectAlternativeCheckBoxes(int count) throws Exception {
-        for (int i = 1; i < count; i++) {
-            click(CHECK_BOX + i + CLOSE_BRACE, "xpath");
+        List<WebElement> checkBox = driver.findElements(By.xpath("//label/input[@type='checkbox']"));
+        for(int i=0; i<checkBox.size(); i =i+2){
+            checkBox.get(i).click();
         }
           }
 
     public void verifyUncheckAllMessage() throws Exception {
         waitForElementAppearance(UNCHECK_ALL, "xpath");
         verifyTextIsPresent(UNCHECK_ALL, "xpath", "Success message is not display");
-    }
-
-    public void verifyAlternativeCheckBoxesareSelected() throws Exception {
-        waitForElementAppearance(UNCHECK_ALL"xpath");
     }
 
     public void alternativeCheckBoxes() throws Exception {
