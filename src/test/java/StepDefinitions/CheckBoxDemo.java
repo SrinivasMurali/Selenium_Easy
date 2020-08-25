@@ -54,4 +54,11 @@ public class CheckBoxDemo extends Configuration {
         checkboxDemo.verifyCheckAllButton();
     }
 
+    @When("Verify uncheck all button appears")
+    public void verifyUncheckAllButtonIsDisplay() throws Exception {
+        checkboxDemo.verifyUncheckAllButtonIsDisplay();
+    }
+
+
+
 }
