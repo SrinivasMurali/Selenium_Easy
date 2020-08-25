@@ -44,4 +44,14 @@ public class CheckBoxDemo extends Configuration {
         checkboxDemo.selectAlternativeCheckBoxes(count);
     }
 
+    @When("Select uncheck all button")
+    public void unCheckAll() throws Exception {
+        checkboxDemo.uncheckAll();
+    }
+
+    @When("Verify all check boxes are unselected")
+    public void verifyCkeckAllButton() throws Exception {
+        checkboxDemo.verifyCheckAllButton();
+    }
+
 }

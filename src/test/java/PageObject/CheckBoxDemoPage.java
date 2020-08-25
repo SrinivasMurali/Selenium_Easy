@@ -14,7 +14,7 @@ public class CheckBoxDemoPage extends BrowserBot {
 
     public static final String SINGLE_CHECK_BOX         = "isAgeSelected",
                                SINGLE_CHK_BOX_SELECTED  = "//div[text()='Success - Check box is checked']",
-                               ALL_CHECK_BOX            = "//label/input[@type='checkbox']",
+                               CHECK_BOX                = "(//input[@type='checkbox'])[",
                                CLOSE_BRACE              = "]",
                                UNCHECK_ALL              = "//input[@value='Uncheck All']",
                                CHECK_ALL                = "//input[@value='Check All']";
@@ -46,7 +46,20 @@ public class CheckBoxDemoPage extends BrowserBot {
         verifyTextIsPresent(UNCHECK_ALL, "xpath", "Success message is not display");
     }
 
-    public void alternativeCheckBoxes() throws Exception {
+    public void verifyAlternativeCheckBoxesareSelected() throws Exception {
+        waitForElementAppearance(UNCHECK_ALL, "xpath");
+    }
 
-     }
+    public void uncheckAll() throws Exception {
+        waitForElementAppearance(UNCHECK_ALL, "xpath");
+        click(UNCHECK_ALL, "xpath");
+    }
+
+    public void verifyCheckAllButton() throws Exception {
+        waitForElementAppearance(CHECK_ALL, "xpath");
+        verifyTextIsPresent(CHECK_ALL, "xpath", "Check all button is not displayed");
+    }
+
+
+
 }
