@@ -42,10 +42,18 @@ public class CheckBoxDemoPage extends BrowserBot {
     }
 
     public void verifyAlternativeCheckBoxesareSelected() throws Exception {
-        waitForElementAppearance(UNCHECK_ALL"xpath");
+        waitForElementAppearance(UNCHECK_ALL, "xpath");
     }
 
-    public void alternativeCheckBoxes() throws Exception {
+    public void uncheckAll() throws Exception {
+        waitForElementAppearance(UNCHECK_ALL, "xpath");
+        click(UNCHECK_ALL, "xpath");
+    }
 
-     }
+    public void verifyCheckAllButton() throws Exception {
+        waitForElementAppearance(CHECK_ALL, "xpath");
+        verifyTextIsPresent(CHECK_ALL, "xpath", "Check all button is not displayed");
+    }
+
+
 }
