@@ -24,9 +24,9 @@ public class CheckBoxDemo extends Configuration {
         checkboxDemo.singleCheckBoxIsSelected();
     }
 
-    @When("Select all check boxes \"(.*?)\"")
-    public void selectAllCheckBoxes(int count) throws Exception {
-        checkboxDemo.selectCheckBoxes(count);
+    @When("Select check all button")
+    public void checkAll() throws Exception {
+        checkboxDemo.checkAll();
     }
 
     @When("Verify all check boxes are selected")
@@ -41,7 +41,7 @@ public class CheckBoxDemo extends Configuration {
 
     @When("Select alternative check boxes")
     public void selectAlternativeCheckBoxes(int count) throws Exception {
-        checkboxDemo.verifyUncheckAllMessage();
+        checkboxDemo.selectAlternativeCheckBoxes(count);
     }
 
 }

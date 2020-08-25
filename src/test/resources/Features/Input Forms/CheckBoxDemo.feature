@@ -11,13 +11,14 @@ Feature: User can select single, multiple and alternative check box
     Then Verify check box selected success message
 
   @MultipleCheckBoxDemo
-  Scenario Outline: Verify user is able to select multiple check box
-    When Select all check boxes "<CheckBox Count>"
+  Scenario: Verify user is able to select multiple check box
+    Given Navigate to selenium easy site
+    When Select no thanks button in learn selenium automate window
+    Then Verify selenium easy page is display
+    When Select input forms link in menu list
+    And Select checkbox demo link
+    When Select check all button
     Then Verify all check boxes are selected
-
-    Examples:
-    |CheckBox Count|
-    |      4       |
 
   @AlternativeCheckBoxes
   Scenario: Verify user is able to select alternative check boxes
