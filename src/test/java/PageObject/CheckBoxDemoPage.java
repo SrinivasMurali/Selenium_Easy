@@ -59,7 +59,4 @@ public class CheckBoxDemoPage extends BrowserBot {
         waitForElementAppearance(CHECK_ALL, "xpath");
         verifyTextIsPresent(CHECK_ALL, "xpath", "Check all button is not displayed");
     }
-
-
-
 }
