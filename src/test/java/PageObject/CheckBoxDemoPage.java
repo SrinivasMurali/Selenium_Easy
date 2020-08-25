@@ -12,7 +12,8 @@ public class CheckBoxDemoPage extends BrowserBot {
                                SINGLE_CHK_BOX_SELECTED  = "//div[text()='Success - Check box is checked']",
                                CHECK_BOX                = "(//input[@type='checkbox'])[",
                                CLOSE_BRACE              = "]",
-                               UNCHECK_ALL              = "//input[@value='Uncheck All']";
+                               UNCHECK_ALL              = "//input[@value='Uncheck All']",
+                               CHECK_ALL                = "//input[@value='Check All']";
 
     public void singleCheckBox() throws Exception {
         waitForElementAppearance(SINGLE_CHECK_BOX, "xpath");
@@ -24,10 +25,9 @@ public class CheckBoxDemoPage extends BrowserBot {
         verifyTextIsPresent(SINGLE_CHK_BOX_SELECTED, "xpath", "Success message is not display");
     }
 
-    public void selectCheckBoxes(int count) throws Exception {
-        for (int i = 1; i < count; i++) {
-            click(CHECK_BOX + i + CLOSE_BRACE, "xpath");
-        }
+    public void checkAll() throws Exception {
+       waitForElementAppearance(CHECK_ALL, "xpath");
+       click(CHECK_ALL, "xpath");
     }
 
     public void selectAlternativeCheckBoxes() throws Exception {
