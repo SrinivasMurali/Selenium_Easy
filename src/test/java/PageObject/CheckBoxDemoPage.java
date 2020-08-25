@@ -36,12 +36,10 @@ public class CheckBoxDemoPage extends BrowserBot {
         }
           }
 
-
     public void verifyUncheckAllMessage() throws Exception {
         waitForElementAppearance(UNCHECK_ALL, "xpath");
         verifyTextIsPresent(UNCHECK_ALL, "xpath", "Success message is not display");
     }
-
 
     public void verifyAlternativeCheckBoxesareSelected() throws Exception {
         waitForElementAppearance(UNCHECK_ALL"xpath");
