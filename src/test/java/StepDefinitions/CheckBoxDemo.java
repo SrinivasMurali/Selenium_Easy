@@ -41,7 +41,7 @@ public class CheckBoxDemo extends Configuration {
 
     @When("Select alternative check boxes")
     public void selectAlternativeCheckBoxes(int count) throws Exception {
-        checkboxDemo.verifyUncheckAllMessage();
+        checkboxDemo.selectAlternativeCheckBoxes();
     }
 
 }

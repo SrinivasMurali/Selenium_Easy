@@ -30,8 +30,10 @@ public class CheckBoxDemoPage extends BrowserBot {
         }
     }
 
-    public void selectAlternativeCheckBoxes() throws Exception {
-
+    public void selectAlternativeCheckBoxes(int count) throws Exception {
+        for (int i = 1; i < count; i++) {
+            click(CHECK_BOX + i + CLOSE_BRACE, "xpath");
+        }
           }
 
 
