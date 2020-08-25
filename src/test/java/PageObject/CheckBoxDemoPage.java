@@ -44,8 +44,8 @@ public class CheckBoxDemoPage extends BrowserBot {
 
 
     public void verifyAlternativeCheckBoxesareSelected() throws Exception {
-
-          }
+        waitForElementAppearance(UNCHECK_ALL"xpath");
+    }
 
     public void alternativeCheckBoxes() throws Exception {
 
