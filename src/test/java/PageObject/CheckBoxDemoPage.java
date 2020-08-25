@@ -43,7 +43,7 @@ public class CheckBoxDemoPage extends BrowserBot {
     }
 
 
-    public void VerifyAlternativeCheckBoxesareSelected() throws Exception {
+    public void verifyAlternativeCheckBoxesareSelected() throws Exception {
 
           }
 
