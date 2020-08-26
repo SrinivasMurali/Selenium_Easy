@@ -34,7 +34,7 @@ Feature: User can select single, multiple and alternative check box
 
   @UncheckButtonVerify
   Scenario: Selecting first three check box uncheck button appear and selecting fourth check box check all button appears
-    When select first three check box
+    When Select first three check box
     Then Verify uncheck all button appears
     When Select last check box
     Then Verify check all button appears
