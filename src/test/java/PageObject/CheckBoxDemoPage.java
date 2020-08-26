@@ -60,8 +60,15 @@ public class CheckBoxDemoPage extends BrowserBot {
         verifyTextIsPresent(CHECK_ALL, "xpath", "Check all button is not displayed");
     }
 
+
+    public void verifyUncheckAllButtonIsDisplay() throws Exception {
+        waitForElementAppearance(UNCHECK_ALL, "xpath");
+        verifyTextIsPresent(UNCHECK_ALL, "xpath", "UnCheck all button is not displayed");
+    }
+
     public void selectFirstThreeChkBoxes() throws Exception {
         waitForElementAppearance(CHECK_ALL, "xpath");
 
     }
+
 }
