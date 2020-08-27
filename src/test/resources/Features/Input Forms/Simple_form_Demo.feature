@@ -12,9 +12,8 @@ Feature: Verifying simple input fields
     Then Verify display string message is expected
 
     Examples:
-      |Message|
+      | Message                               |
       | This is the simple message to display |
-
 
   @TwoInputField
   Scenario Outline: Verify user is able to enter input in two fields
@@ -29,5 +28,6 @@ Feature: Verifying simple input fields
     Then Verify a and b total values are correct "<total>"
 
     Examples:
-    |message a| |message b| |total |
-    |   101   | |   200   | | 301  |
+      | message a |  | message b |  | total |
+      | 101       |  | 200       |  | 301   |
+      | 201       |  | 301       |  | 504   |
