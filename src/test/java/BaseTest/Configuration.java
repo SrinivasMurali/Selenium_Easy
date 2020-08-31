@@ -46,7 +46,7 @@ public class Configuration {
         driver.manage().deleteAllCookies();
     }
 
-    public void navigate_To_URL(String selenium_easy_url) throws Exception{
-driver.get(prop.getProperty(selenium_easy_url));
+    public void navigate_To_URL(String selenium_easy_url) throws Exception {
+        driver.get(prop.getProperty(selenium_easy_url));
     }
 }

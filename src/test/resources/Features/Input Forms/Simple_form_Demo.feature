@@ -2,7 +2,7 @@ Feature: Verifying simple input fields
 
   @SingleInputField
   Scenario Outline: Verifying single input field is working as expected
-    Given Navigate to selenium easy site
+    Given Open the browser and navigate to selenium easy site
     When Select no thanks button in learn selenium automate window
     Then Verify selenium easy page is display
     When Select input forms link in menu list
@@ -17,7 +17,7 @@ Feature: Verifying simple input fields
 
   @TwoInputField
   Scenario Outline: Verify user is able to enter input in two fields
-    Given Navigate to selenium easy site
+    Given Open the browser and navigate to selenium easy site
     When Select no thanks button in learn selenium automate window
     Then Verify selenium easy page is display
     When Select input forms link in menu list

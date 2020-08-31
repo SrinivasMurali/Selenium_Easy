@@ -21,14 +21,14 @@ import java.io.File;
         monochrome = true, // display the console output in a proper readable format
         strict = true, // it will check if any step is not defined in step definition file
         dryRun = false, // to check the mapping is proper between feature file and step def file
-        tags = {"@TwoInputField, @SingleInputField"}
+        tags = {"@SingleInputField"}
 )
 public class Run_Cucumber_Test {
     @AfterClass()
     public static void setup() throws Exception {
         Reporter.loadXMLConfig(new File("src/test/resources/extent-config.xml"));
         Reporter.setSystemInfo("Test User", System.getProperty("user.name"));
-        Reporter.setSystemInfo("Application Name", "Demo");
+        Reporter.setSystemInfo("Application Name", "Selenium_Easy");
         Reporter.setSystemInfo("Operating System Type", System.getProperty("os.name"));
         Reporter.setSystemInfo("Environment", "Sand box");
         Reporter.setTestRunnerOutput("Test Execution Cucumber Report");
