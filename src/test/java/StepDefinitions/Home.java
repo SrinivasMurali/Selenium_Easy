@@ -2,6 +2,7 @@ package StepDefinitions;
 
 import BaseTest.Configuration;
 import PageObject.Home_Page;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
@@ -11,6 +12,11 @@ public class Home extends Configuration {
     public WebDriver driver;
 
     Home_Page home = PageFactory.initElements(driver, Home_Page.class);
+
+    @Given("^Open the browser and navigate to selenium easy site$")
+    public void navigateToSeleniumEasy() throws Exception {
+        navigate_To_URL("selenium_easy_url");
+    }
 
     @When("^Select no thanks button in learn selenium automate window$")
     public void no_Thnaks() throws Exception {
@@ -36,6 +42,4 @@ public class Home extends Configuration {
     public void checkBoxDemo() throws Exception {
         home.checkBoxDemo();
     }
-
-
 }

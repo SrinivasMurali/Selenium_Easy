@@ -18,11 +18,6 @@ public class SimpleFormDemo extends Configuration {
     SimpleFormPage simpleForm = PageFactory.initElements(driver, SimpleFormPage.class);
     Simple_Form_Data simpleFormData = new Simple_Form_Data();
 
-    @Given("^Navigate to selenium easy site$")
-    public void navigateToSeleniumEasy() throws Exception {
-        navigate_To_URL("selenium_easy_url");
-    }
-
     @When("Enter string in message field \"(.*?)\"")
     public void message(String message) throws Exception {
         simpleForm.enterMessage(message);
