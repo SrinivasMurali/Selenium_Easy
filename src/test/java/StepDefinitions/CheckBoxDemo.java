@@ -3,6 +3,7 @@ package StepDefinitions;
 import BaseTest.Configuration;
 import PageObject.CheckBoxDemoPage;
 import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
@@ -19,7 +20,7 @@ public class CheckBoxDemo extends Configuration {
         checkboxDemo.singleCheckBox();
     }
 
-    @When("^Verify check box selected success message$")
+    @Then("^Verify check box selected success message$")
     public void verifySingleCheckBoxIsSelected() throws Exception {
         checkboxDemo.singleCheckBoxIsSelected();
     }
@@ -29,12 +30,12 @@ public class CheckBoxDemo extends Configuration {
         checkboxDemo.checkAll();
     }
 
-    @When("Verify all check boxes are selected")
+    @Then("Verify all check boxes are selected")
     public void verifyUncheckAllMessage(int count) throws Exception {
         checkboxDemo.verifyUncheckAllMessage();
     }
 
-    @When("Verify alternative check boxes are selected")
+    @Then("Verify alternative check boxes are selected")
     public void VerifyAlternativeCheckBoxesareSelected(int count) throws Exception {
 
     }
@@ -49,12 +50,12 @@ public class CheckBoxDemo extends Configuration {
         checkboxDemo.uncheckAll();
     }
 
-    @When("Verify all check boxes are unselected")
+    @Then("Verify all check boxes are unselected")
     public void verifyCkeckAllButton() throws Exception {
         checkboxDemo.verifyCheckAllButton();
     }
 
-    @When("Verify uncheck all button appears")
+    @Then("Verify uncheck all button appears")
     public void verifyUncheckAllButtonIsDisplay() throws Exception {
         checkboxDemo.verifyUncheckAllButtonIsDisplay();
     }
