@@ -1,3 +1,4 @@
+@Smoke
 Feature: User can select single, multiple and alternative check box
 
   @SingleCheckBoxDemo

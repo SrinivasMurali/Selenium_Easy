@@ -32,9 +32,6 @@ Feature: Verifying simple input fields
       | 101       |  | 200       |  | 301   |
       | 201       |  | 301       |  | 504   |
 
-
-
-
 Feature: Verifying simple input fields are working expected
 
   @SingleInputField
